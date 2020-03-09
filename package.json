@@ -1,0 +1,62 @@
+{
+  "name": "webpack-react-boilerplate",
+  "version": "0.1.0",
+  "description": "Starter template webpack and react",
+  "main": "index.js",
+  "repository": "git@github.com:Yuribenjamin/webpack-react-boilerplate.git",
+  "author": "Ibrahim Ragab <Abrahammoustafa@hotmail.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack-dev-server --open --config webpack.config.dev.js",
+    "dev:hot": "yarn run dev --hot",
+    "test": "jest",
+    "format": "pretty-quick",
+    "lint": "eslint ./"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.5.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.1.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "react-axe": "^3.4.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.0",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-hot-loader": "^4.12.19"
+  }
+}
